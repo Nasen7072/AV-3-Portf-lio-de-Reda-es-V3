@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Criativo - Português e Redação</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset e Variáveis */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+            --transition: all 0.3s ease;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --radius: 12px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        /* Layout */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-text p {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* Navegação */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            color: var(--primary);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 10rem 0 5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.8rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--dark);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gray-light);
+            transform: translateY(-3px);
+        }
+
+        /* Seções */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Grid de Produções */
+        .productions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .production-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .production-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+        }
+
+        .card-description {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .card-btn {
+            flex: 1;
+            text-align: center;
+            padding: 0.6rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .card-btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .card-btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .card-btn-secondary {
+            background: var(--gray-light);
+            color: var(--dark);
+        }
+
+        .card-btn-secondary:hover {
+            background: var(--gray);
+            color: white;
+        }
+
+        /* Filtros */
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.2rem;
+            background: white;
+            border: 1px solid var(--gray-light);
+            border-radius: 30px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Stats */
+        .stats {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 0;
+            border-radius: var(--radius);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Sobre */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--gray-light);
+            font-size: 0.9rem;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: var(--radius);
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--gray-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--dark);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.8rem;
+            }
+            
+            .productions-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .hero {
+                padding: 8rem 0 3rem;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .productions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filters {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .filter-btn {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .card-actions {
+                flex-direction: column;
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-pen-fancy"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Portfólio Criativo</h1>
+                    <p>Português & Redação</p>
+                </div>
+            </div>
+            
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#producoes">Produções</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h2>Minha Jornada Literária</h2>
+                <p>Um portfólio das 15 produções que marcaram meu desenvolvimento nas disciplinas de Língua Portuguesa e Redação ao longo deste ano letivo.</p>
+                <div class="hero-buttons">
+                    <a href="#producoes" class="btn btn-primary">
+                        <i class="fas fa-book-open"></i> Explorar Produções
+                    </a>
+                    <a href="#sobre" class="btn btn-secondary">
+                        <i class="fas fa-user"></i> Sobre o Projeto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produções -->
+    <section id="producoes">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Minhas Produções</h2>
+                <p class="section-subtitle">Uma coleção dos trabalhos desenvolvidos ao longo do ano, demonstrando minha evolução na escrita e interpretação textual.</p>
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="analise">Análises</button>
+                <button class="filter-btn" data-filter="redacao">Redações</button>
+                <button class="filter-btn" data-filter="criativo">Textos Criativos</button>
+            </div>
+            
+            <div class="productions-grid" id="productions-container">
+                <!-- Produções serão inseridas via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <div class="stat-number" id="production-count">15</div>
+                    <div class="stat-label">Produções Realizadas</div>
+                </div>
+                <div class="stat-item fade-in delay-1">
+                    <div class="stat-number" id="page-count">0</div>
+                    <div class="stat-label">Páginas Escritas</div>
+                </div>
+                <div class="stat-item fade-in delay-2">
+                    <div class="stat-number" id="word-count">0</div>
+                    <div class="stat-label">Palavras no Total</div>
+                </div>
+                <div class="stat-item fade-in delay-3">
+                    <div class="stat-number">A+</div>
+                    <div class="stat-label">Dedicação e Qualidade</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Sobre Este Portfólio</h2>
+                <p class="section-subtitle">Conheça a trajetória e o propósito por trás deste projeto educacional.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">
+                        Este portfólio representa uma jornada de aprendizado e crescimento nas disciplinas de Língua Portuguesa e Redação. Cada uma das 15 produções aqui apresentadas foi cuidadosamente desenvolvida ao longo do ano letivo, refletindo meu desenvolvimento como escritor, leitor e pensador crítico.
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        Através da exploração de diversos gêneros textuais, da análise de obras literárias à produção de textos criativos, pude expandir meu repertório linguístico e aprimorar minhas habilidades de comunicação escrita.
+                    </p>
+                    <p>
+                        Este projeto não apenas demonstra meu progresso acadêmico, mas também celebra a importância da língua portuguesa como ferramenta de expressão, reflexão e transformação.
+                    </p>
+                </div>
+                <div class="about-image fade-in delay-1">
+                    <div class="about-image-placeholder">
+                        <i class="fas fa-feather-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Portfólio Criativo</h3>
+                    <p style="color: var(--gray-light); margin-bottom: 1.5rem;">
+                        Um compilado das produções desenvolvidas nas disciplinas de Língua Portuguesa e Redação durante o ano letivo.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="#producoes">Produções</a></li>
+                        <li><a href="#sobre">Sobre o Projeto</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> email@exemplo.com</li>
+                        <li><i class="fas fa-phone" style="margin-right: 10px;"></i> (11) 99999-9999</li>
+                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> São Paulo, Brasil</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Portfólio Criativo - Português e Redação. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="production-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title">Título da Produção</h3>
+                <button class="close-modal" id="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Conteúdo será inserido via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dados das produções
+        const productions = [
+            {
+                id: 1,
+                title: "Análise do conto 'A Cartomante'",
+                description: "Análise crítica do conto de Machado de Assis, explorando temas como destino, ciência e superstição.",
+                image: "https://source.unsplash.com/random/600x400/?book,literature",
+                category: "analise",
+                content: "<p>Esta produção consistiu na análise crítica do conto 'A Cartomante' de Machado de Assis. O trabalho explorou temas como destino, ciência e superstição, além de analisar a construção dos personagens e a ironia machadiana.</p><p>Através desta análise, pude compreender melhor as técnicas narrativas utilizadas por Machado de Assis e como ele constrói uma crítica social sutil através de sua prosa.</p>",
+                pages: 3,
+                words: 1500,
+                badge: "Análise"
+            },
+            {
+                id: 2,
+                title: "Redação sobre Sustentabilidade",
+                description: "Texto dissertativo-argumentativo sobre a importância das práticas sustentáveis no mundo contemporâneo.",
+                image: "https://source.unsplash.com/random/600x400/?sustainability,environment",
+                category: "redacao",
+                content: "<p>Nesta redação, abordei a importância das práticas sustentáveis no mundo contemporâneo, argumentando sobre a necessidade de equilíbrio entre desenvolvimento econômico e preservação ambiental.</p><p>O texto seguiu a estrutura dissertativa-argumentativa, com introdução, desenvolvimento e conclusão, apresentando dados concretos e exemplos para sustentar a tese principal.</p>",
+                pages: 2,
+                words: 1200,
+                badge: "Redação"
+            },
+            {
+                id: 3,
+                title: "Resenha Crítica de Filme",
+                description: "Análise crítica do filme 'Central do Brasil', explorando seus aspectos sociais e cinematográficos.",
+                image: "https://source.unsplash.com/random/600x400/?cinema,movie",
+                category: "analise",
+                content: "<p>Esta resenha crítica analisou o filme 'Central do Brasil', dirigido por Walter Salles. O trabalho explorou tanto os aspectos cinematográficos quanto as questões sociais retratadas na obra.</p><p>A resenha destacou a representação do Brasil profundo, a jornada dos personagens e como o filme utiliza elementos visuais e narrativos para construir sua mensagem.</p>",
+                pages: 2,
+                words: 1000,
+                badge: "Resenha"
+            },
+            {
+                id: 4,
+                title: "Artigo de Opinião sobre Educação",
+                description: "Texto opinativo sobre os desafios e perspectivas da educação brasileira no século XXI.",
+                image: "https://source.unsplash.com/random/600x400/?education,school",
+                category: "redacao",
+                content: "<p>Neste artigo de opinião, expus minha visão sobre os desafios e perspectivas da educação brasileira no século XXI. Abordei temas como acesso, qualidade do ensino e a importância da valorização dos professores.</p><p>O texto seguiu a estrutura típica do gênero, com introdução que apresenta o tema, desenvolvimento com argumentos fundamentados e conclusão que reforça o ponto de vista defendido.</p>",
+                pages: 3,
+                words: 1400,
+                badge: "Artigo"
+            },
+            {
+                id: 5,
+                title: "Análise Poética - Carlos Drummond",
+                description: "Interpretação do poema 'No Meio do Caminho' de Carlos Drummond de Andrade.",
+                image: "https://source.unsplash.com/random/600x400/?poetry,writing",
+                category: "analise",
+                content: "<p>Esta produção consistiu na análise do poema 'No Meio do Caminho' de Carlos Drummond de Andrade. Explorei os recursos poéticos utilizados, as camadas de significado e a relação do poema com o contexto histórico de sua produção.</p><p>A análise destacou como Drummond utiliza elementos simples para construir uma reflexão profunda sobre a existência humana e os obstáculos que encontramos em nossa trajetória.</p>",
+                pages: 2,
+                words: 900,
+                badge: "Análise"
+            },
+            {
+                id: 6,
+                title: "Conto de Ficção Científica",
+                description: "Narrativa ficcional com elementos de ficção científica, explorando temas como tecnologia e humanidade.",
+                image: "https://source.unsplash.com/random/600x400/?scifi,future",
+                category: "criativo",
+                content: "<p>Neste conto de ficção científica, criei uma narrativa que explora a relação entre tecnologia e humanidade em um futuro distópico. A história acompanha um personagem que desafia as normas de uma sociedade altamente tecnológica.</p><p>O trabalho me permitiu exercitar a criatividade narrativa, ao mesmo tempo em que explorei questões éticas relacionadas ao avanço tecnológico e sua influência nas relações humanas.</p>",
+                pages: 4,
+                words: 2000,
+                badge: "Conto"
+            },
+            {
+                id: 7,
+                title: "Análise de Charges Políticas",
+                description: "Estudo sobre o uso do humor e da ironia em charges políticas como forma de crítica social.",
+                image: "https://source.unsplash.com/random/600x400/?cartoon,comic",
+                category: "analise",
+                content: "<p>Esta produção analisou o uso do humor e da ironia em charges políticas como forma de crítica social. Examinei diferentes exemplos de charges publicadas em veículos de comunicação, identificando os recursos visuais e textuais utilizados para transmitir mensagens críticas.</p><p>O trabalho destacou como a charge, enquanto gênero multimodal, combina elementos verbais e não verbais para construir sentidos e promover reflexão sobre questões políticas e sociais.</p>",
+                pages: 2,
+                words: 1100,
+                badge: "Análise"
+            },
+            {
+                id: 8,
+                title: "Carta Argumentativa",
+                description: "Carta dirigida a autoridades sobre a importância da preservação do patrimônio histórico.",
+                image: "https://source.unsplash.com/random/600x400/?heritage,history",
+                category: "redacao",
+                content: "<p>Nesta carta argumentativa, dirigi-me a autoridades públicas para defender a importância da preservação do patrimônio histórico. A produção seguiu a estrutura formal do gênero epistolar, com argumentos fundamentados sobre o valor cultural, educativo e turístico do patrimônio histórico.</p><p>O texto buscou persuadir o destinatário através de uma linguagem respeitosa, porém firme, apresentando dados concretos e exemplos de boas práticas de preservação.</p>",
+                pages: 2,
+                words: 1300,
+                badge: "Carta"
+            },
+            {
+                id: 9,
+                title: "Ensaio sobre Literatura Contemporânea",
+                description: "Reflexão sobre tendências e características da literatura brasileira contemporânea.",
+                image: "https://source.unsplash.com/random/600x400/?literature,books",
+                category: "analise",
+                content: "<p>Este ensaio explorou as tendências e características da literatura brasileira contemporânea, analisando obras de autores como Conceição Evaristo, Milton Hatoum e Luiz Ruffato. O trabalho destacou como esses escritores abordam questões identitárias, urbanas e sociais em suas produções.</p><p>Através desta análise, pude compreender melhor as transformações na literatura brasileira nas últimas décadas e como os autores contemporâneos dialogam com o contexto social e político do país.</p>",
+                pages: 4,
+                words: 2200,
+                badge: "Ensaio"
+            },
+            {
+                id: 10,
+                title: "Crônica do Cotidiano",
+                description: "Narrativa breve inspirada em situações do dia a dia, com observações sobre o comportamento humano.",
+                image: "https://source.unsplash.com/random/600x400/?daily,urban",
+                category: "criativo",
+                content: "<p>Nesta crônica, criei uma narrativa breve inspirada em situações do cotidiano, com observações sobre o comportamento humano em contextos urbanos. O texto misturou elementos narrativos e reflexivos, característicos do gênero crônica.</p><p>A produção me permitiu exercitar a observação do cotidiano e a transformação de situações aparentemente banais em material literário, destacando aspectos humanos universais presentes no dia a dia.</p>",
+                pages: 2,
+                words: 800,
+                badge: "Crônica"
+            },
+            {
+                id: 11,
+                title: "Análise Comparativa de Textos",
+                description: "Estudo comparativo entre textos de diferentes épocas sobre o mesmo tema: a representação da cidade.",
+                image: "https://source.unsplash.com/random/600x400/?city,urban",
+                category: "analise",
+                content: "<p>Esta análise comparativa examinou textos de diferentes épocas sobre o mesmo tema: a representação da cidade. Comparei descrições urbanas em obras de autores como Aluísio Azevedo, João do Rio e Ferréz, identificando continuidades e rupturas na forma como a cidade é representada na literatura brasileira.</p><p>O trabalho destacou como as transformações urbanas e sociais se refletem na produção literária de cada período, criando diferentes perspectivas sobre o espaço urbano.</p>",
+                pages: 3,
+                words: 1600,
+                badge: "Análise"
+            },
+            {
+                id: 12,
+                title: "Texto de Divulgação Científica",
+                description: "Produção de texto informativo sobre descobertas recentes na área de neurociência.",
+                image: "https://source.unsplash.com/random/600x400/?science,research",
+                category: "redacao",
+                content: "<p>Neste texto de divulgação científica, produzi um conteúdo informativo sobre descobertas recentes na área de neurociência, especificamente sobre a plasticidade cerebral. O trabalho buscou tornar conceitos complexos acessíveis ao público leigo, sem perder o rigor científico.</p><p>A produção exigiu pesquisa aprofundada sobre o tema e a adaptação da linguagem técnica para uma comunicação clara e atraente, características essenciais do gênero de divulgação científica.</p>",
+                pages: 3,
+                words: 1400,
+                badge: "Divulgação"
+            },
+            {
+                id: 13,
+                title: "Memórias Literárias",
+                description: "Narrativa autobiográfica com elementos ficcionais, explorando lembranças da infância.",
+                image: "https://source.unsplash.com/random/600x400/?childhood,memory",
+                category: "criativo",
+                content: "<p>Nesta produção, criei uma narrativa autobiográfica com elementos ficcionais, explorando lembranças da infância. O texto misturou memórias reais com elaboração literária, criando um retrato afetivo de momentos significativos da formação pessoal.</p><p>O trabalho me permitiu refletir sobre como as experiências da infância moldam nossa identidade e como a memória pode ser trabalhada literariamente, transformando lembranças pessoais em material narrativo universal.</p>",
+                pages: 3,
+                words: 1700,
+                badge: "Memórias"
+            },
+            {
+                id: 14,
+                title: "Análise de Discurso Político",
+                description: "Estudo sobre estratégias argumentativas em discursos políticos contemporâneos.",
+                image: "https://source.unsplash.com/random/600x400/?politics,speech",
+                category: "analise",
+                content: "<p>Esta análise de discurso examinou as estratégias argumentativas em discursos políticos contemporâneos, identificando recursos linguísticos, figuras de retórica e construções discursivas utilizadas para persuadir o público. O trabalho analisou tanto o conteúdo verbal quanto os aspectos não verbais da comunicação política.</p><p>Através desta análise, pude compreender melhor como se constrói a persuasão no discurso político e como diferentes estratégias comunicativas podem influenciar a percepção do público sobre questões políticas.</p>",
+                pages: 3,
+                words: 1800,
+                badge: "Análise"
+            },
+            {
+                id: 15,
+                title: "Texto Teatral - Monólogo",
+                description: "Criação de monólogo teatral explorando conflitos internos de um personagem.",
+                image: "https://source.unsplash.com/random/600x400/?theater,drama",
+                category: "criativo",
+                content: "<p>Nesta produção, criei um monólogo teatral explorando os conflitos internos de um personagem em um momento de decisão crucial. O texto seguiu as convenções do gênero dramático, com indicações cênicas e construção de um discurso que revela gradualmente a psicologia do personagem.</p><p>O trabalho me permitiu explorar a construção de personagens através do discurso direto, exercitando a criação de vozes narrativas distintas e o desenvolvimento de tensão dramática através do texto.</p>",
+                pages: 3,
+                words: 1500,
+                badge: "Teatro"
+            }
+        ];
+
+        // Elementos DOM
+        const productionsContainer = document.getElementById('productions-container');
+        const modal = document.getElementById('production-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        const closeModal = document.getElementById('close-modal');
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const themeToggle = document.getElementById('theme-toggle');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productionCount = document.getElementById('production-count');
+        const pageCount = document.getElementById('page-count');
+        const wordCount = document.getElementById('word-count');
+
+        // Função para renderizar as produções
+        function renderProductions(filter = 'all') {
+            productionsContainer.innerHTML = '';
+            
+            const filteredProductions = filter === 'all' 
+                ? productions 
+                : productions.filter(p => p.category === filter);
+            
+            filteredProductions.forEach(production => {
+                const card = document.createElement('div');
+                card.className = 'production-card fade-in';
+                card.innerHTML = `
+                    <div class="card-badge">${production.badge}</div>
+                    <img src="${production.image}" alt="${production.title}" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">${production.title}</h3>
+                        <p class="card-description">${production.description}</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-file-alt"></i> ${production.pages} páginas</span>
+                            <span><i class="fas fa-font"></i> ${production.words} palavras</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="card-btn card-btn-primary read-more" data-id="${production.id}">
+                                <i class="fas fa-book-open"></i> Ler Mais
+                            </a>
+                            <a href="#" class="card-btn card-btn-secondary download-btn" data-id="${production.id}">
+                                <i class="fas fa-download"></i> PDF
+                            </a>
+                        </div>
+                    </div>
+                `;
+                productionsContainer.appendChild(card);
+            });
+            
+            // Adicionar event listeners aos botões "Ler mais"
+            document.querySelectorAll('.read-more').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const id = parseInt(this.getAttribute('data-id'));
+                    openModal(id);
+                });
+            });
+        }
+
+        // Função para abrir o modal
+        function openModal(id) {
+            const production = productions.find(p => p.id === id);
+            if (production) {
+                modalTitle.textContent = production.title;
+                modalBody.innerHTML = `
+                    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin-bottom: 2rem;">
+                        <img src="${production.image}" alt="${production.title}" style="width: 100%; border-radius: var(--radius);">
+                        <div>
+                            <h4 style="margin-bottom: 1rem; color: var(--primary);">Detalhes da Produção</h4>
+                            <p><strong>Categoria:</strong> ${production.badge}</p>
+                            <p><strong>Páginas:</strong> ${production.pages}</p>
+                            <p><strong>Palavras:</strong> ${production.words}</p>
+                            <p><strong>Data de Conclusão:</strong> ${new Date().toLocaleDateString('pt-BR')}</p>
+                        </div>
+                    </div>
+                    ${production.content}
+                `;
+                modal.style.display = 'flex';
+            }
+        }
+
+        // Função para fechar o modal
+        function closeModalFunc() {
+            modal.style.display = 'none';
+        }
+
+        // Função para calcular totais
+        function calculateTotals() {
+            const totalPages = productions.reduce((sum, production) => sum + production.pages, 0);
+            const totalWords = productions.reduce((sum, production) => sum + production.words, 0);
+            
+            // Animar contadores
+            animateCounter(pageCount, totalPages);
+            animateCounter(wordCount, totalWords);
+        }
+
+        // Função para animar contadores
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 20);
+        }
+
+        // Menu hamburguer
+        hamburger.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Filtros
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class de todos os botões
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Adiciona active class ao botão clicado
+                button.classList.add('active');
+                // Filtra as produções
+                const filter = button.getAttribute('data-filter');
+                renderProductions(filter);
+            });
+        });
+
+        // Tema escuro/claro
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            const icon = themeToggle.querySelector('i');
+            if (document.body.classList.contains('dark-theme')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+
+        // Event listeners
+        closeModal.addEventListener('click', closeModalFunc);
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModalFunc();
+            }
+        });
+
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navMenu.style.display = 'none';
+                }
+            });
+        });
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProductions();
+            calculateTotals();
+        });
+    </script>
+</body>
+</html>
