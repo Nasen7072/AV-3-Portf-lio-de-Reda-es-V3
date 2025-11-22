@@ -4,7 +4,7 @@ const productions = [
         id: 1,
         title: "Análise do conto 'A Cartomante'",
         description: "Análise crítica do conto de Machado de Assis, explorando temas como destino, ciência e superstição.",
-        image: "https://source.unsplash.com/random/600x400/?book",
+        image: "https://m.media-amazon.com/images/I/A18sO0RgI+L._UF1000,1000_QL80_.jpg",
         content: "<p>Esta produção consistiu na análise crítica do conto 'A Cartomante' de Machado de Assis. O trabalho explorou temas como destino, ciência e superstição, além de analisar a construção dos personagens e a ironia machadiana.</p><p>Através desta análise, pude compreender melhor as técnicas narrativas utilizadas por Machado de Assis e como ele constrói uma crítica social sutil através de sua prosa.</p>",
         pages: 3,
         words: 1500
