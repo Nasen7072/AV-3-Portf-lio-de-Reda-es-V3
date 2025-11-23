@@ -1,139 +1,139 @@
-// Dados das produções
+// Dados das produções com novos temas
 const productions = [
     {
         id: 1,
-        title: "Análise do conto 'A Cartomante'",
-        description: "Análise crítica do conto de Machado de Assis, explorando temas como destino, ciência e superstição.",
-        image: "https://m.media-amazon.com/images/I/A18sO0RgI+L._UF1000,1000_QL80_.jpg",
-        content: "<p>Esta produção consistiu na análise crítica do conto 'A Cartomante' de Machado de Assis. O trabalho explorou temas como destino, ciência e superstição, além de analisar a construção dos personagens e a ironia machadiana.</p><p>Através desta análise, pude compreender melhor as técnicas narrativas utilizadas por Machado de Assis e como ele constrói uma crítica social sutil através de sua prosa.</p>",
+        title: "POR QUE OS PROCEDIMENTOS ESTÉTICOS ESTÃO AUMENTANDO ENTRE OS JOVENS?",
+        description: "Análise sobre o crescimento dos procedimentos estéticos entre o público jovem e seus impactos sociais.",
+        image: "https://images.unsplash.com/photo-1594489573857-58baae929016?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        content: "<p>Esta produção analisou o crescimento exponencial dos procedimentos estéticos entre os jovens, explorando fatores como influência das redes sociais, padrões de beleza contemporâneos e acesso facilitado a tratamentos.</p><p>O trabalho abordou tanto os aspectos psicológicos quanto os riscos à saúde envolvidos nessa tendência, propondo reflexões sobre autoestima e aceitação corporal.</p>",
         pages: 3,
         words: 1500
     },
     {
         id: 2,
-        title: "Redação sobre Sustentabilidade",
-        description: "Texto dissertativo-argumentativo sobre a importância das práticas sustentáveis no mundo contemporâneo.",
-        image: "https://source.unsplash.com/random/600x400/?sustainability",
-        content: "<p>Nesta redação, abordei a importância das práticas sustentáveis no mundo contemporâneo, argumentando sobre a necessidade de equilíbrio entre desenvolvimento econômico e preservação ambiental.</p><p>O texto seguiu a estrutura dissertativa-argumentativa, com introdução, desenvolvimento e conclusão, apresentando dados concretos e exemplos para sustentar a tese principal.</p>",
-        pages: 2,
-        words: 1200
-    },
-    {
-        id: 3,
-        title: "Resenha Crítica de Filme",
-        description: "Análise crítica do filme 'Central do Brasil', explorando seus aspectos sociais e cinematográficos.",
-        image: "https://source.unsplash.com/random/600x400/?cinema",
-        content: "<p>Esta resenha crítica analisou o filme 'Central do Brasil', dirigido por Walter Salles. O trabalho explorou tanto os aspectos cinematográficos quanto as questões sociais retratadas na obra.</p><p>A resenha destacou a representação do Brasil profundo, a jornada dos personagens e como o filme utiliza elementos visuais e narrativos para construir sua mensagem.</p>",
-        pages: 2,
-        words: 1000
-    },
-    {
-        id: 4,
-        title: "Artigo de Opinião sobre Educação",
-        description: "Texto opinativo sobre os desafios e perspectivas da educação brasileira no século XXI.",
-        image: "https://source.unsplash.com/random/600x400/?education",
-        content: "<p>Neste artigo de opinião, expus minha visão sobre os desafios e perspectivas da educação brasileira no século XXI. Abordei temas como acesso, qualidade do ensino e a importância da valorização dos professores.</p><p>O texto seguiu a estrutura típica do gênero, com introdução que apresenta o tema, desenvolvimento com argumentos fundamentados e conclusão que reforça o ponto de vista defendido.</p>",
-        pages: 3,
-        words: 1400
-    },
-    {
-        id: 5,
-        title: "Análise Poética - Carlos Drummond",
-        description: "Interpretação do poema 'No Meio do Caminho' de Carlos Drummond de Andrade.",
-        image: "https://source.unsplash.com/random/600x400/?poetry",
-        content: "<p>Esta produção consistiu na análise do poema 'No Meio do Caminho' de Carlos Drummond de Andrade. Explorei os recursos poéticos utilizados, as camadas de significado e a relação do poema com o contexto histórico de sua produção.</p><p>A análise destacou como Drummond utiliza elementos simples para construir uma reflexão profunda sobre a existência humana e os obstáculos que encontramos em nossa trajetória.</p>",
-        pages: 2,
-        words: 900
-    },
-    {
-        id: 6,
-        title: "Conto de Ficção Científica",
-        description: "Narrativa ficcional com elementos de ficção científica, explorando temas como tecnologia e humanidade.",
-        image: "https://source.unsplash.com/random/600x400/?scifi",
-        content: "<p>Neste conto de ficção científica, criei uma narrativa que explora a relação entre tecnologia e humanidade em um futuro distópico. A história acompanha um personagem que desafia as normas de uma sociedade altamente tecnológica.</p><p>O trabalho me permitiu exercitar a criatividade narrativa, ao mesmo tempo em que explorei questões éticas relacionadas ao avanço tecnológico e sua influência nas relações humanas.</p>",
-        pages: 4,
-        words: 2000
-    },
-    {
-        id: 7,
-        title: "Análise de Charges Políticas",
-        description: "Estudo sobre o uso do humor e da ironia em charges políticas como forma de crítica social.",
-        image: "https://source.unsplash.com/random/600x400/?cartoon",
-        content: "<p>Esta produção analisou o uso do humor e da ironia em charges políticas como forma de crítica social. Examinei diferentes exemplos de charges publicadas em veículos de comunicação, identificando os recursos visuais e textuais utilizados para transmitir mensagens críticas.</p><p>O trabalho destacou como a charge, enquanto gênero multimodal, combina elementos verbais e não verbais para construir sentidos e promover reflexão sobre questões políticas e sociais.</p>",
-        pages: 2,
-        words: 1100
-    },
-    {
-        id: 8,
-        title: "Carta Argumentativa",
-        description: "Carta dirigida a autoridades sobre a importância da preservação do patrimônio histórico.",
-        image: "https://source.unsplash.com/random/600x400/?heritage",
-        content: "<p>Nesta carta argumentativa, dirigi-me a autoridades públicas para defender a importância da preservação do patrimônio histórico. A produção seguiu a estrutura formal do gênero epistolar, com argumentos fundamentados sobre o valor cultural, educativo e turístico do patrimônio histórico.</p><p>O texto buscou persuadir o destinatário através de uma linguagem respeitosa, porém firme, apresentando dados concretos e exemplos de boas práticas de preservação.</p>",
-        pages: 2,
-        words: 1300
-    },
-    {
-        id: 9,
-        title: "Ensaio sobre Literatura Contemporânea",
-        description: "Reflexão sobre tendências e características da literatura brasileira contemporânea.",
-        image: "https://source.unsplash.com/random/600x400/?literature",
-        content: "<p>Este ensaio explorou as tendências e características da literatura brasileira contemporânea, analisando obras de autores como Conceição Evaristo, Milton Hatoum e Luiz Ruffato. O trabalho destacou como esses escritores abordam questões identitárias, urbanas e sociais em suas produções.</p><p>Através desta análise, pude compreender melhor as transformações na literatura brasileira nas últimas décadas e como os autores contemporâneos dialogam com o contexto social e político do país.</p>",
-        pages: 4,
-        words: 2200
-    },
-    {
-        id: 10,
-        title: "Crônica do Cotidiano",
-        description: "Narrativa breve inspirada em situações do dia a dia, com observações sobre o comportamento humano.",
-        image: "https://source.unsplash.com/random/600x400/?daily",
-        content: "<p>Nesta crônica, criei uma narrativa breve inspirada em situações do cotidiano, com observações sobre o comportamento humano em contextos urbanos. O texto misturou elementos narrativos e reflexivos, característicos do gênero crônica.</p><p>A produção me permitiu exercitar a observação do cotidiano e a transformação de situações aparentemente banais em material literário, destacando aspectos humanos universais presentes no dia a dia.</p>",
-        pages: 2,
-        words: 800
-    },
-    {
-        id: 11,
-        title: "Análise Comparativa de Textos",
-        description: "Estudo comparativo entre textos de diferentes épocas sobre o mesmo tema: a representação da cidade.",
-        image: "https://source.unsplash.com/random/600x400/?city",
-        content: "<p>Esta análise comparativa examinou textos de diferentes épocas sobre o mesmo tema: a representação da cidade. Comparei descrições urbanas em obras de autores como Aluísio Azevedo, João do Rio e Ferréz, identificando continuidades e rupturas na forma como a cidade é representada na literatura brasileira.</p><p>O trabalho destacou como as transformações urbanas e sociais se refletem na produção literária de cada período, criando diferentes perspectivas sobre o espaço urbano.</p>",
+        title: "ACESSIBILIDADE E INCLUSÃO DE PESSOAS COM DEFICIÊNCIA NO BRASIL",
+        description: "Reflexão sobre os desafios e avanços na inclusão de pessoas com deficiência na sociedade brasileira.",
+        image: "https://images.unsplash.com/photo-1544174232-5d273c562b99?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        content: "<p>Este trabalho examinou a situação da acessibilidade e inclusão de pessoas com deficiência no Brasil, analisando desde a infraestrutura urbana até as políticas públicas e a conscientização social.</p><p>A produção destacou a importância da inclusão como direito fundamental e apresentou propostas para uma sociedade mais acessível e igualitária.</p>",
         pages: 3,
         words: 1600
     },
     {
-        id: 12,
-        title: "Texto de Divulgação Científica",
-        description: "Produção de texto informativo sobre descobertas recentes na área de neurociência.",
-        image: "https://source.unsplash.com/random/600x400/?science",
-        content: "<p>Neste texto de divulgação científica, produzi um conteúdo informativo sobre descobertas recentes na área de neurociência, especificamente sobre a plasticidade cerebral. O trabalho buscou tornar conceitos complexos acessíveis ao público leigo, sem perder o rigor científico.</p><p>A produção exigiu pesquisa aprofundada sobre o tema e a adaptação da linguagem técnica para uma comunicação clara e atraente, características essenciais do gênero de divulgação científica.</p>",
+        id: 3,
+        title: "PRINCIPAIS FATORES QUE INFLUENCIAM NA QUALIDADE DE VIDA E NO BEM-ESTAR DA POPULAÇÃO",
+        description: "Estudo sobre os elementos que determinam a qualidade de vida e bem-estar social.",
+        image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        content: "<p>Esta análise explorou os múltiplos fatores que influenciam a qualidade de vida, incluindo saúde, educação, segurança, meio ambiente e relações sociais.</p><p>O trabalho apresentou uma visão holística do bem-estar, considerando tanto aspectos objetivos quanto subjetivos da felicidade humana.</p>",
+        pages: 4,
+        words: 2000
+    },
+    {
+        id: 4,
+        title: "AS MUDANÇAS CLIMÁTICAS NO BRASIL E SEUS DESAFIOS",
+        description: "Análise dos impactos das mudanças climáticas no território brasileiro e os desafios enfrentados.",
+        image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        content: "<p>Esta produção investigou os efeitos das mudanças climáticas no Brasil, com foco em eventos extremos, alterações nos biomas e impactos na agricultura.</p><p>O trabalho também discutiu políticas de adaptação e mitigação, destacando a importância do desenvolvimento sustentável.</p>",
         pages: 3,
-        words: 1400
+        words: 1700
+    },
+    {
+        id: 5,
+        title: "AS CONSEQUÊNCIAS DO DESCARTE DE LIXO ELETRÔNICO",
+        description: "Reflexão sobre os impactos ambientais e sociais do descarte inadequado de lixo eletrônico.",
+        image: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        content: "<p>Este trabalho analisou as graves consequências do descarte inadequado de lixo eletrônico, incluindo contaminação do solo e água, e problemas de saúde pública.</p><p>A produção também explorou soluções como reciclagem, logística reversa e conscientização ambiental.</p>",
+        pages: 3,
+        words: 1550
+    },
+    {
+        id: 6,
+        title: "O CONSUMO DE ULTRAPROCESSADOS E SUAS CONSEQUÊNCIAS À SAÚDE",
+        description: "Estudo sobre os impactos do consumo de alimentos ultraprocessados na saúde humana.",
+        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        content: "<p>Esta análise examinou os efeitos do consumo regular de alimentos ultraprocessados, relacionando-o ao aumento de doenças crônicas como obesidade, diabetes e problemas cardiovasculares.</p><p>O trabalho também discutiu políticas públicas de alimentação saudável e educação nutricional.</p>",
+        pages: 3,
+        words: 1650
+    },
+    {
+        id: 7,
+        title: "FATORES E EFEITOS DA DEPENDÊNCIA EM JOGOS DE APOSTAS NA WEB",
+        description: "Investigação sobre a dependência em jogos de apostas online e seus impactos sociais.",
+        image: "https://images.unsplash.com/photo-1593110121193-30e1e7ea36a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        content: "<p>Este trabalho explorou os fatores psicológicos e sociais que levam à dependência em jogos de apostas online, analisando seus efeitos devastadores nas finanças e relações familiares.</p><p>A produção também discutiu medidas de prevenção e tratamento para esse tipo de dependência.</p>",
+        pages: 3,
+        words: 1600
+    },
+    {
+        id: 8,
+        title: "A IMPORTÂNCIA DO TRABALHO VOLUNTÁRIO NO COMBATE ÀS DESIGUALDADES SOCIAIS",
+        description: "Reflexão sobre o papel do voluntariado na redução das desigualdades sociais.",
+        image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        content: "<p>Esta produção destacou a importância do trabalho voluntário como instrumento de transformação social, analisando seu impacto no combate à pobreza e na promoção da cidadania.</p><p>O trabalho apresentou casos de sucesso e incentivou a participação social como forma de construir uma sociedade mais justa.</p>",
+        pages: 3,
+        words: 1550
+    },
+    {
+        id: 9,
+        title: "ADULTIZAÇÃO INFANTIL – CONSEQUÊNCIAS DA PERDA IRREPARÁVEL DA INFÂNCIA",
+        description: "Análise sobre a adultização precoce das crianças e seus impactos no desenvolvimento.",
+        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        content: "<p>Este trabalho investigou o fenômeno da adultização infantil, examinando como a exposição precoce a responsabilidades e informações adultas afeta o desenvolvimento psicológico das crianças.</p><p>A produção alertou para a importância de preservar a infância como fase fundamental de formação.</p>",
+        pages: 3,
+        words: 1700
+    },
+    {
+        id: 10,
+        title: "CAMINHOS PARA COMBATER O ETARISMO NAS RELAÇÕES SOCIAIS",
+        description: "Reflexão sobre o preconceito etário e estratégias para combatê-lo.",
+        image: "https://images.unsplash.com/photo-1576097449797-4c9a9ed6b2a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        content: "<p>Esta análise explorou o etarismo (preconceito baseado na idade) em suas diferentes manifestações, desde o mercado de trabalho até as relações interpessoais.</p><p>O trabalho propôs estratégias educacionais e políticas para promover o respeito à diversidade etária.</p>",
+        pages: 3,
+        words: 1600
+    },
+    {
+        id: 11,
+        title: "A IMPORTÂNCIA DA EDUCAÇÃO FINANCEIRA PARA OS JOVENS",
+        description: "Estudo sobre a relevância do ensino de educação financeira para a formação dos jovens.",
+        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        content: "<p>Este trabalho destacou a importância da educação financeira desde cedo, analisando como ela contribui para a autonomia, planejamento de vida e prevenção de problemas como endividamento.</p><p>A produção defendeu a inclusão da educação financeira no currículo escolar como forma de empoderamento juvenil.</p>",
+        pages: 3,
+        words: 1550
+    },
+    {
+        id: 12,
+        title: "DESAFIOS PARA A VALORIZAÇÃO DA CULTURA POPULAR BRASILEIRA",
+        description: "Análise dos obstáculos enfrentados pela cultura popular brasileira e estratégias de valorização.",
+        image: "https://images.unsplash.com/photo-1485795959901-5cdaec9ce83d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        content: "<p>Esta produção investigou os desafios para preservação e valorização da cultura popular brasileira frente à globalização e homogeneização cultural.</p><p>O trabalho apresentou propostas para fortalecer as manifestações culturais tradicionais como patrimônio nacional.</p>",
+        pages: 3,
+        words: 1650
     },
     {
         id: 13,
-        title: "Memórias Literárias",
-        description: "Narrativa autobiográfica com elementos ficcionais, explorando lembranças da infância.",
-        image: "https://source.unsplash.com/random/600x400/?childhood",
-        content: "<p>Nesta produção, criei uma narrativa autobiográfica com elementos ficcionais, explorando lembranças da infância. O texto misturou memórias reais com elaboração literária, criando um retrato afetivo de momentos significativos da formação pessoal.</p><p>O trabalho me permitiu refletir sobre como as experiências da infância moldam nossa identidade e como a memória pode ser trabalhada literariamente, transformando lembranças pessoais em material narrativo universal.</p>",
+        title: "CAMINHOS PARA A UNIVERSALIZAÇÃO DO SANEAMENTO BÁSICO NO BRASIL",
+        description: "Reflexão sobre os desafios e soluções para universalizar o saneamento básico no país.",
+        image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        content: "<p>Este trabalho analisou a situação do saneamento básico no Brasil, destacando as desigualdades regionais e os impactos na saúde pública.</p><p>A produção discutiu investimentos necessários, políticas públicas e tecnologias para alcançar a universalização do saneamento.</p>",
         pages: 3,
         words: 1700
     },
     {
         id: 14,
-        title: "Análise de Discurso Político",
-        description: "Estudo sobre estratégias argumentativas em discursos políticos contemporâneos.",
-        image: "https://source.unsplash.com/random/600x400/?politics",
-        content: "<p>Esta análise de discurso examinou as estratégias argumentativas em discursos políticos contemporâneos, identificando recursos linguísticos, figuras de retórica e construções discursivas utilizadas para persuadir o público. O trabalho analisou tanto o conteúdo verbal quanto os aspectos não verbais da comunicação política.</p><p>Através desta análise, pude compreender melhor como se constrói a persuasão no discurso político e como diferentes estratégias comunicativas podem influenciar a percepção do público sobre questões políticas.</p>",
+        title: "O PAPEL DO ESPORTE COMO FERRAMENTA DE TRANSFORMAÇÃO SOCIAL",
+        description: "Estudo sobre o potencial do esporte na promoção da inclusão e transformação social.",
+        image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        content: "<p>Esta análise explorou como o esporte pode ser utilizado como ferramenta de transformação social, promovendo valores como trabalho em equipe, disciplina e superação.</p><p>O trabalho apresentou casos de projetos sociais que utilizam o esporte para inclusão de jovens em situação de vulnerabilidade.</p>",
         pages: 3,
-        words: 1800
+        words: 1600
     },
     {
         id: 15,
-        title: "Texto Teatral - Monólogo",
-        description: "Criação de monólogo teatral explorando conflitos internos de um personagem.",
-        image: "https://source.unsplash.com/random/600x400/?theater",
-        content: "<p>Nesta produção, criei um monólogo teatral explorando os conflitos internos de um personagem em um momento de decisão crucial. O texto seguiu as convenções do gênero dramático, com indicações cênicas e construção de um discurso que revela gradualmente a psicologia do personagem.</p><p>O trabalho me permitiu explorar a construção de personagens através do discurso direto, exercitando a criação de vozes narrativas distintas e o desenvolvimento de tensão dramática através do texto.</p>",
+        title: "AS CONSEQUÊNCIAS DO DESCARTE DE LIXO ELETRÔNICO",
+        description: "Análise aprofundada sobre os impactos ambientais do lixo eletrônico e soluções sustentáveis.",
+        image: "https://images.unsplash.com/photo-1587334941771-424db0367c95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+        content: "<p>Esta produção complementar aprofundou a análise sobre o lixo eletrônico, focando em soluções inovadoras como economia circular, reutilização de componentes e conscientização do consumidor.</p><p>O trabalho destacou a importância da responsabilidade compartilhada entre governo, empresas e cidadãos.</p>",
         pages: 3,
-        words: 1500
+        words: 1650
     }
 ];
 
