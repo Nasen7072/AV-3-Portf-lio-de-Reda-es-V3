@@ -1,140 +1,25 @@
-// Dados das produções
+// Dados das produções com as redações completas
 const productions = [
     {
         id: 1,
         title: "POR QUE OS PROCEDIMENTOS ESTÉTICOS ESTÃO AUMENTANDO ENTRE OS JOVENS?",
         description: "Análise sobre o crescimento da busca por procedimentos estéticos entre o público jovem e seus impactos sociais.",
         image: "https://midias.em.com.br/_midias/jpg/2024/04/24/2150478728-36447503.jpg?20240424091845",
-        content: "<p>Esta produção analisa o aumento significativo de procedimentos estéticos entre os jovens brasileiros. O trabalho explora fatores como influência das redes sociais, padrões de beleza contemporâneos e a busca por aceitação social.</p><p>A redação aborda também os riscos associados a essas intervenções quando realizadas sem orientação adequada e a importância da valorização da diversidade corporal.</p>",
+        content: `
+            <div class="redacao-content">
+                <p>Atualmente o padrão estético está sendo mais implantado como prioridades na mente dos demais jovens, o aumento do processamento estético entre jovens está ligado a diversos fatores, incluindo principalmente a pressão por padrões de belezas difundidos nas redes sociais e raízes sociais, a busca pela auto estima e ser socialmente aceito com a influência de tendências e modas.</p>
+                
+                <p>A exposição constante a imagens de corpos perfeitos ou retocados nas redes sociais cria uma padronização de beleza inatingível, causando muitos jovens a buscarem ou se aproximarem desse ideal. A adolescência é um Período de transformações Físicas e Psicológica, e a busca por processamentos estéticos pode ser uma forma de lidar com insatisfações e inseguranças relacionadas à aparência, buscando melhorar a autoestima e a autoconfiança.</p>
+                
+                <p>O bullying, especialmente relacionado à aparência física, pode ser um fator que leva alguns jovens a buscar procedimentos estéticos para se proteger de comentários e situações constrangedoras. A influência da mídia também é responsável, A mídia, com sua constante valorização da juventude e de corpos perfeitos, pode exercer grande pressão sobre os jovens, levando-os a buscar procedimentos estéticos para se adequar a esses padrões.</p>
+                
+                <p>Em resumo, o aumento de procedimentos estéticos entre jovens é um fenômeno complexo, influenciando por diversos fatores sociais, culturais e individuais. É importante que os jovens tenha acesso a informações claras e precisas sobre os riscos e benefícios desses procedimentos, além de desenvolverem uma redação saudável com sua própria imagem e autoestima.</p>
+            </div>
+        `,
         pages: 3,
         words: 1500
     },
-    {
-        id: 2,
-        title: "ACESSIBILIDADE E INCLUSÃO DE PESSOAS COM DEFICIÊNCIA NO BRASIL",
-        description: "Reflexão sobre os desafios e avanços na inclusão de pessoas com deficiência na sociedade brasileira.",
-        image: "https://blog.br.tkelevator.com/wp-content/uploads/2020/12/diversidade-e-inclusao-1140x725.png",
-        content: "<p>Esta produção discute a situação da acessibilidade e inclusão de pessoas com deficiência no Brasil. O texto aborda desde barreiras arquitetônicas até preconceitos sociais que dificultam a plena participação desses cidadãos na sociedade.</p><p>A redação também analisa a legislação brasileira sobre o tema e propõe medidas para promover uma sociedade verdadeiramente inclusiva.</p>",
-        pages: 3,
-        words: 1600
-    },
-    {
-        id: 3,
-        title: "PRINCIPAIS FATORES QUE INFLUENCIAM NA QUALIDADE DE VIDA E NO BEM-ESTAR DA POPULAÇÃO",
-        description: "Análise dos elementos que impactam diretamente na qualidade de vida e bem-estar dos cidadãos.",
-        image: "https://totalpass.com/wp-content/uploads/2023/02/qualidade-de-vida.jpg",
-        content: "<p>Esta produção examina os principais fatores que influenciam na qualidade de vida e bem-estar da população, incluindo aspectos como saúde, educação, segurança, moradia e relações sociais.</p><p>O texto discute como políticas públicas eficazes podem melhorar esses indicadores e promover maior equidade social.</p>",
-        pages: 3,
-        words: 1700
-    },
-    {
-        id: 4,
-        title: "AS MUDANÇAS CLIMÁTICAS NO BRASIL E SEUS DESAFIOS",
-        description: "Análise dos impactos das mudanças climáticas no território brasileiro e os desafios para enfrentá-los.",
-        image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
-        content: "<p>Esta produção aborda as mudanças climáticas no contexto brasileiro, analisando seus efeitos em diferentes biomas e regiões do país. O texto discute eventos extremos, alterações nos padrões de chuva e impactos na agricultura.</p><p>A redação também propõe medidas de adaptação e mitigação que podem ser implementadas em nível nacional e local.</p>",
-        pages: 3,
-        words: 1800
-    },
-    {
-        id: 5,
-        title: "AS CONSEQUÊNCIAS DO DESCARTE DE LIXO ELETRÔNICO",
-        description: "Reflexão sobre os impactos ambientais e sociais do descarte inadequado de resíduos eletrônicos.",
-        image: "https://seteambiental.com.br/wp-content/uploads/2023/05/crescimento-lixo-eletronico-sete-ambiental.jpg",
-        content: "<p>Esta produção analisa as consequências do descarte inadequado de lixo eletrônico, abordando desde a contaminação do solo e da água até os riscos à saúde humana.</p><p>O texto também discute a responsabilidade compartilhada entre fabricantes, governo e consumidores no gerenciamento adequado desses resíduos.</p>",
-        pages: 3,
-        words: 1600
-    },
-    {
-        id: 6,
-        title: "O CONSUMO DE ULTRAPROCESSADOS E SUAS CONSEQUÊNCIAS À SAÚDE",
-        description: "Análise dos impactos do consumo de alimentos ultraprocessados na saúde da população.",
-        image: "https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/gettyimages-180258510.jpg?w=1600",
-        content: "<p>Esta produção examina o crescimento do consumo de alimentos ultraprocessados e suas consequências para a saúde pública. O texto aborda a relação entre esses produtos e o aumento de doenças crônicas como obesidade, diabetes e hipertensão.</p><p>A redação também discute estratégias para promover alimentação mais saudável e consciente na população.</p>",
-        pages: 3,
-        words: 1700
-    },
-    {
-        id: 7,
-        title: "FATORES E EFEITOS DA DEPENDÊNCIA EM JOGOS DE APOSTAS NA WEB",
-        description: "Reflexão sobre os fatores que levam à dependência em jogos de apostas online e seus efeitos na vida dos usuários.",
-        image: "https://www.conexasaude.com.br/blog/wp-content/uploads/2024/11/iStock-907044482-1-768x513.jpg",
-        content: "<p>Esta produção analisa os fatores psicológicos, sociais e econômicos que contribuem para a dependência em jogos de apostas online. O texto explora também os efeitos devastadores dessa dependência na vida financeira, familiar e profissional dos usuários.</p><p>A redação discute ainda a necessidade de regulamentação e políticas de prevenção para esse problema crescente.</p>",
-        pages: 3,
-        words: 1750
-    },
-    {
-        id: 8,
-        title: "A IMPORTÂNCIA DO TRABALHO VOLUNTÁRIO NO COMBATE ÀS DESIGUALDADES SOCIAIS",
-        description: "Análise do papel do trabalho voluntário na redução das desigualdades sociais no Brasil.",
-        image: "https://jrmcoaching.com.br/wp-content/uploads/2016/11/Trabalho-Voluntario.jpg",
-        content: "<p>Esta produção discute a importância do trabalho voluntário como ferramenta de combate às desigualdades sociais. O texto aborda como iniciativas voluntárias podem complementar ações governamentais e promover transformação social.</p><p>A redação também reflete sobre os benefícios do voluntariado tanto para quem recebe quanto para quem oferece o serviço.</p>",
-        pages: 3,
-        words: 1650
-    },
-    {
-        id: 9,
-        title: "ADULTIZAÇÃO INFANTIL – CONSEQUÊNCIAS DA PERDA IRREPARÁVEL DA INFÂNCIA",
-        description: "Reflexão sobre o fenômeno da adultização infantil e suas consequências no desenvolvimento das crianças.",
-        image: "https://images.educamaisbrasil.com.br/content/noticias/adultizacao-infantil-causas-impactos-e-como-proteger-as-criancas_g.jpg",
-        content: "<p>Esta produção analisa o fenômeno da adultização infantil, explorando como a exposição precoce a responsabilidades, informações e comportamentos adultos pode impactar negativamente o desenvolvimento das crianças.</p><p>O texto discute também o papel da mídia, da publicidade e das redes sociais nesse processo e propõe caminhos para preservar a infância.</p>",
-        pages: 3,
-        words: 1700
-    },
-    {
-        id: 10,
-        title: "CAMINHOS PARA COMBATER O ETARISMO NAS RELAÇÕES SOCIAIS",
-        description: "Análise do etarismo (idadeísmo) e propostas para combatê-lo nas relações sociais.",
-        image: "https://redacao.rhpravoce.com.br/wp-content/uploads/2023/03/Etarismo-como-combater-o-preconceito-de-idade.jpg",
-        content: "<p>Esta produção examina o etarismo - discriminação baseada na idade - e suas manifestações na sociedade contemporânea. O texto aborda estereótipos relacionados tanto a jovens quanto a idosos e seus impactos nas relações sociais.</p><p>A redação propõe caminhos para combater esse tipo de preconceito e promover uma sociedade mais inclusiva para todas as idades.</p>",
-        pages: 3,
-        words: 1600
-    },
-    {
-        id: 11,
-        title: "A IMPORTÂNCIA DA EDUCAÇÃO FINANCEIRA PARA OS JOVENS",
-        description: "Reflexão sobre a relevância da educação financeira na formação dos jovens e seu impacto no futuro.",
-        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
-        content: "<p>Esta produção discute a importância da educação financeira para os jovens, abordando como o conhecimento sobre finanças pessoais pode impactar positivamente suas vidas adultas.</p><p>O texto analisa também a necessidade de incluir esse tema no currículo escolar e propõe estratégias para tornar o aprendizado financeiro mais acessível e atraente para os jovens.</p>",
-        pages: 3,
-        words: 1550
-    },
-    {
-        id: 12,
-        title: "DESAFIOS PARA A VALORIZAÇÃO DA CULTURA POPULAR BRASILEIRA",
-        description: "Análise dos desafios enfrentados para a preservação e valorização da cultura popular brasileira.",
-        image: "https://sopacultural.com/wp-content/uploads/2024/08/f2b44d3a-7b70-4987-b0a2-91b5f90fb1a1.webp",
-        content: "<p>Esta produção examina os desafios para a valorização da cultura popular brasileira em um contexto de globalização e homogeneização cultural. O texto aborda desde a falta de incentivos até o desconhecimento da população sobre suas próprias tradições.</p><p>A redação propõe medidas para preservar e revitalizar manifestações culturais populares, reconhecendo sua importância para a identidade nacional.</p>",
-        pages: 3,
-        words: 1700
-    },
-    {
-        id: 13,
-        title: "CAMINHOS PARA A UNIVERSALIZAÇÃO DO SANEAMENTO BÁSICO NO BRASIL",
-        description: "Reflexão sobre os desafios e possíveis soluções para universalizar o saneamento básico no Brasil.",
-        image: "https://conteudo.imguol.com.br/c/noticias/33/2019/04/24/11jul2018---falta-de-saneamento-basico-em-ruas-e-canais-no-bairro-da-terra-firme-periferia-de-belem-no-para-1556111395715_v2_1x1.jpg",
-        content: "<p>Esta produção analisa os desafios para a universalização do saneamento básico no Brasil, abordando desde questões técnicas e financeiras até desigualdades regionais e sociais.</p><p>O texto discute também os impactos da falta de saneamento na saúde pública e propõe caminhos para superar essas barreiras, garantindo acesso universal a esse direito fundamental.</p>",
-        pages: 3,
-        words: 1800
-    },
-    {
-        id: 14,
-        title: "O PAPEL DO ESPORTE COMO FERRAMENTA DE TRANSFORMAÇÃO SOCIAL",
-        description: "Análise do potencial do esporte como instrumento de transformação e inclusão social.",
-        image: "https://esbrasil.com.br/wp-content/uploads/2022/12/esporte_transformacao-social_ES-Brasil.jpg",
-        content: "<p>Esta produção examina o papel do esporte como ferramenta de transformação social, analisando como práticas esportivas podem promover inclusão, desenvolvimento de habilidades socioemocionais e construção de valores.</p><p>O texto discute também iniciativas esportivas que têm impactado positivamente comunidades vulneráveis e propõe formas de ampliar esse potencial transformador.</p>",
-        pages: 3,
-        words: 1650
-    },
-    {
-        id: 15,
-        title: "AS CONSEQUÊNCIAS DO DESCARTE DE LIXO ELETRÔNICO",
-        description: "Reflexão sobre os impactos ambientais e sociais do descarte inadequado de resíduos eletrônicos.",
-        image: "https://www.recicletronic.com.br/imagens/portal/descarte-de-desktop_11830_372541_1611774637622_cover.jpg",
-        content: "<p>Esta produção analisa as consequências do descarte inadequado de lixo eletrônico, abordando desde a contaminação do solo e da água até os riscos à saúde humana.</p><p>O texto também discute a responsabilidade compartilhada entre fabricantes, governo e consumidores no gerenciamento adequado desses resíduos.</p>",
-        pages: 3,
-        words: 1600
-    }
+    // ... (mantenha os outros 14 objetos de produção exatamente como estavam antes)
 ];
 
 // Inicialização quando o DOM estiver carregado
@@ -155,22 +40,27 @@ document.addEventListener('DOMContentLoaded', function() {
         musicToggle: document.getElementById('music-toggle'),
         miniMusicToggle: document.getElementById('mini-music-toggle'),
         volumeSlider: document.getElementById('volume-slider'),
+        miniVolumeSlider: document.getElementById('mini-volume-slider'),
         backgroundMusic: document.getElementById('background-music'),
         musicPlayer: document.getElementById('music-player'),
-        playIcon: document.getElementById('play-icon')
+        playIcon: document.getElementById('play-icon'),
+        hamburger: document.getElementById('hamburger'),
+        navMenu: document.getElementById('nav-menu')
     };
 
     // Estado
     let isPlaying = false;
     let isExpanded = false;
-    let audioContext = null;
-    let audioElement = null;
 
     // Verificar elementos críticos
-    if (!elements.productionsContainer) {
-        console.error('❌ Elemento productions-container não encontrado');
-        return;
-    }
+    console.log('🔍 Verificando elementos DOM...');
+    Object.keys(elements).forEach(key => {
+        if (!elements[key]) {
+            console.warn(`⚠️ Elemento não encontrado: ${key}`);
+        } else {
+            console.log(`✅ Elemento encontrado: ${key}`);
+        }
+    });
 
     // Função para alternar modo claro/escuro
     function toggleTheme() {
@@ -196,86 +86,68 @@ document.addEventListener('DOMContentLoaded', function() {
     function initAudio() {
         console.log('🔊 Inicializando sistema de áudio...');
         
-        // URLs alternativas para música Lofi (sem restrições de CORS)
-        const musicUrls = [
-            'https://assets.mixkit.co/music/preview/mixkit-chill-abstract-loop-229.mp3',
-            'https://assets.mixkit.co/music/preview/mixkit-vibes-126.mp3',
-            'https://assets.mixkit.co/music/preview/mixkit-slow-trap-175.mp3'
-        ];
-
-        // Criar elemento de áudio dinamicamente
-        audioElement = new Audio();
-        audioElement.loop = true;
-        audioElement.volume = elements.volumeSlider ? elements.volumeSlider.value / 100 : 0.5;
-        
-        // Tentar carregar a primeira URL disponível
-        let currentUrlIndex = 0;
-        
-        function tryNextUrl() {
-            if (currentUrlIndex < musicUrls.length) {
-                audioElement.src = musicUrls[currentUrlIndex];
-                audioElement.load();
-                currentUrlIndex++;
-            } else {
-                console.warn('❌ Todas as URLs de áudio falharam. Música não disponível.');
-                disableMusicControls();
-            }
-        }
-
-        audioElement.addEventListener('error', function() {
-            console.warn(`❌ Falha ao carregar áudio da URL ${currentUrlIndex}, tentando próxima...`);
-            tryNextUrl();
-        });
-
-        audioElement.addEventListener('canplaythrough', function() {
-            console.log('✅ Áudio carregado com sucesso');
-        });
-
-        tryNextUrl();
-    }
-
-    // Função para desativar controles de música se não houver áudio
-    function disableMusicControls() {
-        if (elements.musicToggle) {
-            elements.musicToggle.style.display = 'none';
-        }
-        if (elements.miniMusicToggle) {
-            elements.miniMusicToggle.style.display = 'none';
-        }
-        if (elements.musicPlayer) {
-            elements.musicPlayer.style.display = 'none';
+        if (elements.backgroundMusic) {
+            // Configurar volume inicial
+            const initialVolume = 0.5;
+            elements.backgroundMusic.volume = initialVolume;
+            
+            if (elements.volumeSlider) elements.volumeSlider.value = initialVolume * 100;
+            if (elements.miniVolumeSlider) elements.miniVolumeSlider.value = initialVolume * 100;
+            
+            // Configurar eventos de áudio
+            elements.backgroundMusic.addEventListener('canplaythrough', function() {
+                console.log('✅ Áudio carregado e pronto para reprodução');
+            });
+            
+            elements.backgroundMusic.addEventListener('error', function(e) {
+                console.error('❌ Erro no áudio:', e);
+                console.log('Tentando URL alternativa...');
+                // Tentar URL alternativa se a primeira falhar
+                elements.backgroundMusic.src = 'https://assets.mixkit.co/music/preview/mixkit-vibes-126.mp3';
+            });
+            
+            console.log('✅ Áudio configurado');
+        } else {
+            console.error('❌ Elemento de áudio não encontrado');
         }
     }
 
     // Função para tocar/pausar música
     function toggleMusic() {
-        if (!audioElement) {
+        console.log('🎵 Alternando estado da música');
+        
+        if (!elements.backgroundMusic) {
             console.log('Áudio não disponível');
             return;
         }
 
         if (isPlaying) {
-            audioElement.pause();
+            console.log('⏸️ Pausando música');
+            elements.backgroundMusic.pause();
             updateMusicUI(false);
             isPlaying = false;
         } else {
-            const playPromise = audioElement.play();
+            console.log('▶️ Reproduzindo música');
+            const playPromise = elements.backgroundMusic.play();
             
             if (playPromise !== undefined) {
                 playPromise.then(() => {
+                    console.log('✅ Música iniciada com sucesso');
                     updateMusicUI(true);
                     isPlaying = true;
                 }).catch(error => {
-                    console.log('🔇 Interação do usuário necessária para reproduzir áudio');
-                    // Solicitar interação do usuário
-                    requestUserInteraction();
+                    console.log('🔇 Interação do usuário necessária para reproduzir áudio:', error);
+                    showAudioActivationPrompt();
                 });
             }
         }
     }
 
-    // Função para solicitar interação do usuário
-    function requestUserInteraction() {
+    // Função para mostrar prompt de ativação de áudio
+    function showAudioActivationPrompt() {
+        console.log('👆 Mostrando prompt de ativação de áudio');
+        
+        // Criar um overlay simples
         const overlay = document.createElement('div');
         overlay.style.cssText = `
             position: fixed;
@@ -293,10 +165,10 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         
         overlay.innerHTML = `
-            <div style="text-align: center; padding: 20px; background: #2a2a2a; border-radius: 10px;">
-                <h3>🎵 Ativar Música</h3>
-                <p>Clique no botão abaixo para ativar a reprodução de música</p>
-                <button style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 10px;">
+            <div style="text-align: center; padding: 30px; background: #2a2a2a; border-radius: 15px; max-width: 300px;">
+                <h3 style="margin-bottom: 15px;">🎵 Ativar Música</h3>
+                <p style="margin-bottom: 20px; line-height: 1.5;">Clique no botão abaixo para ativar a reprodução de música de fundo</p>
+                <button style="padding: 12px 24px; background: #e94560; color: white; border: none; border-radius: 25px; cursor: pointer; font-size: 16px; transition: all 0.3s;">
                     Ativar Música
                 </button>
             </div>
@@ -306,10 +178,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const button = overlay.querySelector('button');
         button.addEventListener('click', function() {
-            audioElement.play().then(() => {
+            elements.backgroundMusic.play().then(() => {
                 updateMusicUI(true);
                 isPlaying = true;
                 document.body.removeChild(overlay);
+                console.log('✅ Áudio ativado via prompt');
             }).catch(error => {
                 console.error('Erro ao reproduzir áudio:', error);
                 document.body.removeChild(overlay);
@@ -319,30 +192,64 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Função para atualizar a UI da música
     function updateMusicUI(playing) {
+        console.log(`🎛️ Atualizando UI da música: ${playing ? 'playing' : 'paused'}`);
+        
         if (playing) {
-            if (elements.playIcon) elements.playIcon.className = 'fas fa-pause';
+            // Atualizar ícone do botão principal
             if (elements.musicToggle) {
                 elements.musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
                 elements.musicToggle.classList.add('playing', 'active');
             }
-            if (elements.miniMusicToggle) elements.miniMusicToggle.classList.add('active');
-            if (elements.musicPlayer) elements.musicPlayer.classList.add('playing');
+            // Atualizar ícone do botão mini
+            if (elements.playIcon) {
+                elements.playIcon.className = 'fas fa-pause';
+            }
+            if (elements.miniMusicToggle) {
+                elements.miniMusicToggle.classList.add('active');
+            }
+            if (elements.musicPlayer) {
+                elements.musicPlayer.classList.add('playing');
+            }
         } else {
-            if (elements.playIcon) elements.playIcon.className = 'fas fa-play';
+            // Atualizar ícone do botão principal
             if (elements.musicToggle) {
                 elements.musicToggle.innerHTML = '<i class="fas fa-music"></i>';
                 elements.musicToggle.classList.remove('playing', 'active');
             }
-            if (elements.miniMusicToggle) elements.miniMusicToggle.classList.remove('active');
-            if (elements.musicPlayer) elements.musicPlayer.classList.remove('playing');
+            // Atualizar ícone do botão mini
+            if (elements.playIcon) {
+                elements.playIcon.className = 'fas fa-play';
+            }
+            if (elements.miniMusicToggle) {
+                elements.miniMusicToggle.classList.remove('active');
+            }
+            if (elements.musicPlayer) {
+                elements.musicPlayer.classList.remove('playing');
+            }
         }
     }
 
     // Função para ajustar volume
     function adjustVolume() {
-        if (audioElement && elements.volumeSlider) {
+        if (elements.backgroundMusic && elements.volumeSlider) {
             const volume = elements.volumeSlider.value / 100;
-            audioElement.volume = volume;
+            elements.backgroundMusic.volume = volume;
+            if (elements.miniVolumeSlider) {
+                elements.miniVolumeSlider.value = elements.volumeSlider.value;
+            }
+            console.log(`🔊 Volume ajustado para: ${volume}`);
+        }
+    }
+
+    // Função para ajustar volume mini
+    function adjustMiniVolume() {
+        if (elements.backgroundMusic && elements.miniVolumeSlider) {
+            const volume = elements.miniVolumeSlider.value / 100;
+            elements.backgroundMusic.volume = volume;
+            if (elements.volumeSlider) {
+                elements.volumeSlider.value = elements.miniVolumeSlider.value;
+            }
+            console.log(`🔊 Volume mini ajustado para: ${volume}`);
         }
     }
 
@@ -351,11 +258,17 @@ document.addEventListener('DOMContentLoaded', function() {
         isExpanded = !isExpanded;
         if (elements.musicPlayer) {
             elements.musicPlayer.classList.toggle('expanded', isExpanded);
+            console.log(`🎵 Player ${isExpanded ? 'expandido' : 'recolhido'}`);
         }
     }
 
     // Função para renderizar produções
     function renderProductions() {
+        if (!elements.productionsContainer) {
+            console.error('❌ Container de produções não encontrado');
+            return;
+        }
+
         elements.productionsContainer.innerHTML = productions.map(production => `
             <div class="production-card">
                 <img src="${production.image}" alt="${production.title}" class="production-img" loading="lazy">
@@ -372,6 +285,7 @@ document.addEventListener('DOMContentLoaded', function() {
             elements.productionCount.textContent = productions.length;
         }
 
+        // Adicionar event listeners para os botões "Ler mais"
         elements.productionsContainer.addEventListener('click', function(e) {
             if (e.target.classList.contains('read-more')) {
                 e.preventDefault();
@@ -384,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Função para abrir modal
     function openModal(id) {
         const production = productions.find(p => p.id === id);
-        if (production) {
+        if (production && elements.modal && elements.modalTitle && elements.modalBody) {
             elements.modalTitle.textContent = production.title;
             elements.modalBody.innerHTML = production.content;
             elements.modal.style.display = 'flex';
@@ -394,8 +308,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Função para fechar modal
     function closeModal() {
-        elements.modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
+        if (elements.modal) {
+            elements.modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
     }
 
     // Função para calcular totais
@@ -422,28 +338,93 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 20);
     }
 
+    // Função para toggle do menu hamburger
+    function toggleMenu() {
+        if (elements.navMenu) {
+            elements.navMenu.classList.toggle('active');
+        }
+    }
+
     // Configurar eventos
     function setupEventListeners() {
-        if (elements.closeModal) elements.closeModal.addEventListener('click', closeModal);
-        if (elements.themeToggle) elements.themeToggle.addEventListener('click', toggleTheme);
-        if (elements.musicToggle) elements.musicToggle.addEventListener('click', toggleMusic);
-        if (elements.miniMusicToggle) elements.miniMusicToggle.addEventListener('click', toggleMusic);
-        if (elements.musicPlayer) elements.musicPlayer.addEventListener('click', toggleMusicPlayer);
-        if (elements.volumeSlider) elements.volumeSlider.addEventListener('input', adjustVolume);
+        console.log('🔗 Configurando event listeners...');
+        
+        // Modal
+        if (elements.closeModal) {
+            elements.closeModal.addEventListener('click', closeModal);
+        }
+        
+        // Tema
+        if (elements.themeToggle) {
+            elements.themeToggle.addEventListener('click', toggleTheme);
+        }
+        
+        // Música - botão principal
+        if (elements.musicToggle) {
+            elements.musicToggle.addEventListener('click', toggleMusic);
+        }
+        
+        // Música - botão mini
+        if (elements.miniMusicToggle) {
+            elements.miniMusicToggle.addEventListener('click', toggleMusic);
+        }
+        
+        // Player de música
+        if (elements.musicPlayer) {
+            elements.musicPlayer.addEventListener('click', function(e) {
+                if (e.target === elements.musicPlayer || e.target.classList.contains('music-info')) {
+                    toggleMusicPlayer();
+                }
+            });
+        }
+        
+        // Controles de volume
+        if (elements.volumeSlider) {
+            elements.volumeSlider.addEventListener('input', adjustVolume);
+        }
+        
+        if (elements.miniVolumeSlider) {
+            elements.miniVolumeSlider.addEventListener('input', adjustMiniVolume);
+        }
 
+        // Menu hamburger
+        if (elements.hamburger) {
+            elements.hamburger.addEventListener('click', toggleMenu);
+        }
+
+        // Fechar modal ao clicar fora
         window.addEventListener('click', (e) => {
             if (e.target === elements.modal) closeModal();
         });
 
-        // Permitir ativação de áudio em qualquer clique na página
-        document.addEventListener('click', function initAudioOnInteraction() {
-            if (audioElement && !isPlaying) {
-                audioElement.play().then(() => {
+        // Fechar menu ao clicar em um link
+        if (elements.navMenu) {
+            elements.navMenu.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    elements.navMenu.classList.remove('active');
+                }
+            });
+        }
+
+        // Ativar áudio na primeira interação do usuário
+        function initAudioOnInteraction() {
+            console.log('👆 Interação do usuário detectada - tentando ativar áudio');
+            if (elements.backgroundMusic && !isPlaying) {
+                elements.backgroundMusic.play().then(() => {
                     updateMusicUI(true);
                     isPlaying = true;
-                }).catch(console.error);
+                    console.log('✅ Áudio ativado por interação do usuário');
+                }).catch(error => {
+                    console.log('❌ Falha ao ativar áudio:', error);
+                });
             }
-        }, { once: true });
+            // Remover este listener após a primeira interação
+            document.removeEventListener('click', initAudioOnInteraction);
+            document.removeEventListener('keydown', initAudioOnInteraction);
+        }
+
+        document.addEventListener('click', initAudioOnInteraction, { once: true });
+        document.addEventListener('keydown', initAudioOnInteraction, { once: true });
     }
 
     // Inicializar tudo
