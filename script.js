@@ -163,6 +163,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Estado
     let isPlaying = false;
     let isExpanded = false;
+    let audioContext = null;
+    let audioElement = null;
 
     // Verificar elementos críticos
     if (!elements.productionsContainer) {
@@ -190,66 +192,173 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Função para inicializar áudio
+    function initAudio() {
+        console.log('🔊 Inicializando sistema de áudio...');
+        
+        // URLs alternativas para música Lofi (sem restrições de CORS)
+        const musicUrls = [
+            'https://assets.mixkit.co/music/preview/mixkit-chill-abstract-loop-229.mp3',
+            'https://assets.mixkit.co/music/preview/mixkit-vibes-126.mp3',
+            'https://assets.mixkit.co/music/preview/mixkit-slow-trap-175.mp3'
+        ];
+
+        // Criar elemento de áudio dinamicamente
+        audioElement = new Audio();
+        audioElement.loop = true;
+        audioElement.volume = elements.volumeSlider ? elements.volumeSlider.value / 100 : 0.5;
+        
+        // Tentar carregar a primeira URL disponível
+        let currentUrlIndex = 0;
+        
+        function tryNextUrl() {
+            if (currentUrlIndex < musicUrls.length) {
+                audioElement.src = musicUrls[currentUrlIndex];
+                audioElement.load();
+                currentUrlIndex++;
+            } else {
+                console.warn('❌ Todas as URLs de áudio falharam. Música não disponível.');
+                disableMusicControls();
+            }
+        }
+
+        audioElement.addEventListener('error', function() {
+            console.warn(`❌ Falha ao carregar áudio da URL ${currentUrlIndex}, tentando próxima...`);
+            tryNextUrl();
+        });
+
+        audioElement.addEventListener('canplaythrough', function() {
+            console.log('✅ Áudio carregado com sucesso');
+        });
+
+        tryNextUrl();
+    }
+
+    // Função para desativar controles de música se não houver áudio
+    function disableMusicControls() {
+        if (elements.musicToggle) {
+            elements.musicToggle.style.display = 'none';
+        }
+        if (elements.miniMusicToggle) {
+            elements.miniMusicToggle.style.display = 'none';
+        }
+        if (elements.musicPlayer) {
+            elements.musicPlayer.style.display = 'none';
+        }
+    }
+
     // Função para tocar/pausar música
     function toggleMusic() {
+        if (!audioElement) {
+            console.log('Áudio não disponível');
+            return;
+        }
+
         if (isPlaying) {
-            elements.backgroundMusic.pause();
+            audioElement.pause();
             updateMusicUI(false);
             isPlaying = false;
         } else {
-            elements.backgroundMusic.play().then(() => {
+            const playPromise = audioElement.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    updateMusicUI(true);
+                    isPlaying = true;
+                }).catch(error => {
+                    console.log('🔇 Interação do usuário necessária para reproduzir áudio');
+                    // Solicitar interação do usuário
+                    requestUserInteraction();
+                });
+            }
+        }
+    }
+
+    // Função para solicitar interação do usuário
+    function requestUserInteraction() {
+        const overlay = document.createElement('div');
+        overlay.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            color: white;
+            font-family: Arial, sans-serif;
+        `;
+        
+        overlay.innerHTML = `
+            <div style="text-align: center; padding: 20px; background: #2a2a2a; border-radius: 10px;">
+                <h3>🎵 Ativar Música</h3>
+                <p>Clique no botão abaixo para ativar a reprodução de música</p>
+                <button style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 10px;">
+                    Ativar Música
+                </button>
+            </div>
+        `;
+        
+        document.body.appendChild(overlay);
+        
+        const button = overlay.querySelector('button');
+        button.addEventListener('click', function() {
+            audioElement.play().then(() => {
                 updateMusicUI(true);
                 isPlaying = true;
+                document.body.removeChild(overlay);
             }).catch(error => {
-                console.log('Clique em qualquer lugar da página primeiro para ativar o áudio');
-                // Ativar música após interação do usuário
-                document.addEventListener('click', function activateMusic() {
-                    elements.backgroundMusic.play().then(() => {
-                        updateMusicUI(true);
-                        isPlaying = true;
-                    });
-                    document.removeEventListener('click', activateMusic);
-                }, { once: true });
+                console.error('Erro ao reproduzir áudio:', error);
+                document.body.removeChild(overlay);
             });
-        }
+        });
     }
 
     // Função para atualizar a UI da música
     function updateMusicUI(playing) {
         if (playing) {
-            elements.playIcon.className = 'fas fa-pause';
-            elements.musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
-            elements.musicToggle.classList.add('playing', 'active');
-            elements.miniMusicToggle.classList.add('active');
-            elements.musicPlayer.classList.add('playing');
-            elements.musicToggle.style.animation = 'pulse 2s infinite';
+            if (elements.playIcon) elements.playIcon.className = 'fas fa-pause';
+            if (elements.musicToggle) {
+                elements.musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
+                elements.musicToggle.classList.add('playing', 'active');
+            }
+            if (elements.miniMusicToggle) elements.miniMusicToggle.classList.add('active');
+            if (elements.musicPlayer) elements.musicPlayer.classList.add('playing');
         } else {
-            elements.playIcon.className = 'fas fa-play';
-            elements.musicToggle.innerHTML = '<i class="fas fa-music"></i>';
-            elements.musicToggle.classList.remove('playing', 'active');
-            elements.miniMusicToggle.classList.remove('active');
-            elements.musicPlayer.classList.remove('playing');
-            elements.musicToggle.style.animation = 'none';
+            if (elements.playIcon) elements.playIcon.className = 'fas fa-play';
+            if (elements.musicToggle) {
+                elements.musicToggle.innerHTML = '<i class="fas fa-music"></i>';
+                elements.musicToggle.classList.remove('playing', 'active');
+            }
+            if (elements.miniMusicToggle) elements.miniMusicToggle.classList.remove('active');
+            if (elements.musicPlayer) elements.musicPlayer.classList.remove('playing');
         }
     }
 
     // Função para ajustar volume
     function adjustVolume() {
-        const volume = elements.volumeSlider.value / 100;
-        elements.backgroundMusic.volume = volume;
+        if (audioElement && elements.volumeSlider) {
+            const volume = elements.volumeSlider.value / 100;
+            audioElement.volume = volume;
+        }
     }
 
     // Função para expandir player
     function toggleMusicPlayer() {
         isExpanded = !isExpanded;
-        elements.musicPlayer.classList.toggle('expanded', isExpanded);
+        if (elements.musicPlayer) {
+            elements.musicPlayer.classList.toggle('expanded', isExpanded);
+        }
     }
 
     // Função para renderizar produções
     function renderProductions() {
         elements.productionsContainer.innerHTML = productions.map(production => `
             <div class="production-card">
-                <img src="${production.image}" alt="${production.title}" class="production-img">
+                <img src="${production.image}" alt="${production.title}" class="production-img" loading="lazy">
                 <div class="production-content">
                     <h3>${production.title}</h3>
                     <p>${production.description}</p>
@@ -257,6 +366,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
         `).join('');
+
+        // Atualizar contador de produções
+        if (elements.productionCount) {
+            elements.productionCount.textContent = productions.length;
+        }
 
         elements.productionsContainer.addEventListener('click', function(e) {
             if (e.target.classList.contains('read-more')) {
@@ -289,8 +403,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const totalPages = productions.reduce((sum, p) => sum + p.pages, 0);
         const totalWords = productions.reduce((sum, p) => sum + p.words, 0);
         
-        animateCounter(elements.pageCount, totalPages);
-        animateCounter(elements.wordCount, totalWords);
+        if (elements.pageCount) animateCounter(elements.pageCount, totalPages);
+        if (elements.wordCount) animateCounter(elements.wordCount, totalWords);
     }
 
     // Função para animar contadores
@@ -300,26 +414,36 @@ document.addEventListener('DOMContentLoaded', function() {
         const timer = setInterval(() => {
             current += increment;
             if (current >= target) {
-                element.textContent = target;
+                element.textContent = target.toLocaleString();
                 clearInterval(timer);
             } else {
-                element.textContent = Math.floor(current);
+                element.textContent = Math.floor(current).toLocaleString();
             }
         }, 20);
     }
 
     // Configurar eventos
     function setupEventListeners() {
-        elements.closeModal?.addEventListener('click', closeModal);
-        elements.themeToggle?.addEventListener('click', toggleTheme);
-        elements.musicToggle?.addEventListener('click', toggleMusic);
-        elements.miniMusicToggle?.addEventListener('click', toggleMusic);
-        elements.musicPlayer?.addEventListener('click', toggleMusicPlayer);
-        elements.volumeSlider?.addEventListener('input', adjustVolume);
+        if (elements.closeModal) elements.closeModal.addEventListener('click', closeModal);
+        if (elements.themeToggle) elements.themeToggle.addEventListener('click', toggleTheme);
+        if (elements.musicToggle) elements.musicToggle.addEventListener('click', toggleMusic);
+        if (elements.miniMusicToggle) elements.miniMusicToggle.addEventListener('click', toggleMusic);
+        if (elements.musicPlayer) elements.musicPlayer.addEventListener('click', toggleMusicPlayer);
+        if (elements.volumeSlider) elements.volumeSlider.addEventListener('input', adjustVolume);
 
         window.addEventListener('click', (e) => {
             if (e.target === elements.modal) closeModal();
         });
+
+        // Permitir ativação de áudio em qualquer clique na página
+        document.addEventListener('click', function initAudioOnInteraction() {
+            if (audioElement && !isPlaying) {
+                audioElement.play().then(() => {
+                    updateMusicUI(true);
+                    isPlaying = true;
+                }).catch(console.error);
+            }
+        }, { once: true });
     }
 
     // Inicializar tudo
@@ -328,13 +452,8 @@ document.addEventListener('DOMContentLoaded', function() {
         renderProductions();
         calculateTotals();
         initTheme();
+        initAudio();
         setupEventListeners();
-        
-        // Configurar áudio
-        if (elements.backgroundMusic) {
-            elements.backgroundMusic.volume = elements.volumeSlider.value / 100;
-            console.log('🔊 Áudio configurado');
-        }
         
         console.log('✅ Site inicializado com sucesso!');
     }
