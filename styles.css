@@ -1,151 +1,170 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Produções de Português e Redação</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <h1>Portfólio de Produções</h1>
-                <p>Língua Portuguesa e Redação</p>
-            </div>
-            <nav>
-                <button class="hamburger" id="hamburger" aria-label="Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul id="nav-menu">
-                    <li><a href="#producoes">Produções</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li class="controls">
-                        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar modo claro/escuro">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                        <button class="music-toggle" id="music-toggle" aria-label="Alternar música">
-                            <i class="fas fa-music"></i>
-                        </button>
-                        <div class="volume-control">
-                            <input type="range" min="0" max="100" value="50" class="volume-slider" id="volume-slider" aria-label="Controle de volume">
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+/* Correções para o Music Player */
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--card-bg);
+    border-radius: 50px;
+    padding: 12px 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 1000;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    min-width: 60px;
+    max-width: 60px;
+    overflow: hidden;
+    cursor: pointer;
+}
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <h2>Produções de Português e Redação</h2>
-            <p>Um compilado das 15 produções realizadas ao longo do ano letivo, demonstrando o desenvolvimento das habilidades de escrita e interpretação textual.</p>
-        </div>
-    </section>
+.music-player.expanded {
+    min-width: 280px;
+    max-width: 280px;
+}
 
-    <!-- Produções -->
-    <section id="producoes">
-        <div class="container">
-            <h2 class="section-title">Minhas Produções</h2>
-            <div class="productions-grid" id="productions-container">
-                <!-- As produções serão inseridas aqui via JavaScript -->
-            </div>
-        </div>
-    </section>
+.music-info {
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
 
-    <!-- Sobre -->
-    <section id="sobre">
-        <div class="container">
-            <h2 class="section-title">Sobre o Portfólio</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Este portfólio reúne as 15 produções desenvolvidas ao longo do ano letivo nas disciplinas de Língua Portuguesa e Redação. Cada trabalho representa uma etapa do meu desenvolvimento nas habilidades de leitura, interpretação e produção textual.</p>
-                    <p>Através destas produções, pude explorar diferentes gêneros textuais, técnicas de argumentação e elementos da língua portuguesa, consolidando meu aprendizado e demonstrando minha evolução como escritor e leitor crítico.</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://www.connectescolas.com.br/blog/wp-content/uploads/2023/03/AdobeStock_215842088-1-scaled-1.jpeg" alt="Escolhendo um Livro">
-                </div>
-            </div>
-        </div>
-    </section>
+.music-player.expanded .music-info {
+    opacity: 1;
+    max-width: 150px;
+}
 
-    <!-- Contador -->
-    <section class="counter">
-        <div class="container">
-            <div class="counter-content">
-                <div class="counter-item">
-                    <div class="counter-number" id="production-count">15</div>
-                    <div class="counter-label">Produções</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number" id="page-count">0</div>
-                    <div class="counter-label">Páginas Escritas</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number" id="word-count">0</div>
-                    <div class="counter-label">Palavras Escritas</div>
-                </div>
-            </div>
-        </div>
-    </section>
+.music-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0;
+}
 
-    <!-- Footer -->
-    <footer id="contato">
-        <div class="container">
-            <div class="footer-content">
-                <p>Portfólio de Produções - Língua Portuguesa e Redação</p>
-                <p>Finalização do Ano</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/kaka.vtr.nk7/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://mail.google.com/mail/u/0/?ibxr=0#inbox" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                </div>
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> oliveira.santos.kaua@escola.pr.gov.br</p>
-                    <p><i class="fas fa-envelope"></i> mkaua4321@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> (11) 99905-3605</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Brasil, Paraná, Curitiba</p>
-                </div>
-                <p>&copy; Nasen/Kauã Vitor N-23 3-D</p>
-            </div>
-        </div>
-    </footer>
+.music-artist {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    color: var(--text-color);
+    margin: 0;
+}
 
-    <!-- Music Player -->
-    <div class="music-player" id="music-player">
-        <div class="music-info">
-            <div class="music-title">LoFi Study</div>
-            <div class="music-artist">Chill Vibes</div>
-        </div>
-        <button class="mini-music-toggle" id="mini-music-toggle" aria-label="Reproduzir música">
-            <i class="fas fa-play" id="play-icon"></i>
-        </button>
-        <div class="volume-control">
-            <input type="range" min="0" max="100" value="50" class="volume-slider" id="mini-volume-slider" aria-label="Controle de volume">
-        </div>
-    </div>
+.mini-music-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    flex-shrink: 0;
+}
 
-    <!-- Modal -->
-    <div class="modal" id="production-modal">
-        <div class="modal-content">
-            <button class="close-modal" id="close-modal" aria-label="Fechar">
-                <i class="fas fa-times"></i>
-            </button>
-            <h2 id="modal-title">Título da Produção</h2>
-            <div class="modal-body" id="modal-body">
-                <!-- Conteúdo será inserido via JavaScript -->
-            </div>
-        </div>
-    </div>
+.mini-music-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
 
-    <!-- ÁUDIO -->
-    <audio id="background-music" loop>
-        <source src="https://assets.mixkit.co/music/preview/mixkit-chill-abstract-loop-229.mp3" type="audio/mpeg">
-    </audio>
+.music-player .volume-control {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.music-player.expanded .volume-control {
+    display: flex;
+}
+
+.music-player .volume-slider {
+    width: 80px;
+    height: 4px;
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    outline: none;
+}
+
+.music-player .volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--highlight-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.music-player .volume-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Estados dos botões quando música está tocando */
+.music-toggle.active,
+.mini-music-toggle.active {
+    background-color: var(--highlight-color);
+    color: white;
+}
+
+.music-player.playing {
+    background: linear-gradient(135deg, var(--highlight-color), #4361ee);
+}
+
+.music-player.playing .mini-music-toggle {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.music-toggle.playing {
+    animation: pulse 2s infinite;
+}
+
+/* Garantir que os ícones apareçam */
+.fas, .fab {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+/* Correções para navegação móvel */
+@media (max-width: 768px) {
+    .music-player {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: calc(100% - 20px);
+    }
+    
+    .music-player.expanded {
+        min-width: auto;
+        max-width: calc(100% - 20px);
+    }
+    
+    .music-player .volume-slider {
+        width: 60px;
+    }
+    
+    .volume-control {
+        display: none;
+    }
+}
+
+/* Animações suaves */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.music-player {
+    animation: fadeIn 0.5s ease-out;
+}
