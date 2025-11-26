@@ -123,6 +123,9 @@
         <button class="mini-music-toggle" id="mini-music-toggle" aria-label="Reproduzir música">
             <i class="fas fa-play" id="play-icon"></i>
         </button>
+        <div class="volume-control">
+            <input type="range" min="0" max="100" value="50" class="volume-slider" id="mini-volume-slider" aria-label="Controle de volume">
+        </div>
     </div>
 
     <!-- Modal -->
@@ -140,36 +143,9 @@
 
     <!-- ÁUDIO -->
     <audio id="background-music" loop preload="auto">
-        <source src="https://cdn.pixabay.com/download/audio/2022/11/22/audio_ecfcaaac6c.mp3?filename=lofi-chill-medium-version-159456.mp3" type="audio/mpeg">
+        <source src="https://assets.mixkit.co/music/preview/mixkit-chill-abstract-loop-229.mp3" type="audio/mpeg">
         Seu navegador não suporta o elemento de áudio.
     </audio>
-
-       <!-- ÁUDIO ÚNICO - ESCOLHA APENAS UMA DAS OPÇÕES ABAIXO -->
-
-    <!-- OPÇÃO 1: Se você fez upload do audio.mp3 no GitHub, use ESTE: -->
-    <audio id="background-music" loop preload="auto">
-        <source src="audio.mp3" type="audio/mpeg">
-        Seu navegador não suporta o elemento de áudio.
-    </audio>
-
-    <!-- OPÇÃO 2: Se NÃO tem audio.mp3, use ESTE (áudio online) - DESCOMENTE: -->
-    <!--
-    <audio id="background-music" loop preload="auto">
-        <source src="https://cdn.pixabay.com/download/audio/2022/11/22/audio_ecfcaaac6c.mp3?filename=lofi-chill-medium-version-159456.mp3" type="audio/mpeg">
-        Seu navegador não suporta o elemento de áudio.
-    </audio>
-    -->
-
-    <div class="footer-col">
-                    <h3>Contato</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> oliveira.santos.kaua@escola.pr.gov.br</li>
-                        <li><i class="fas fa-envelope"></i> mkaua4321@gmail.com</li>
-                        <li><i class="fas fa-phone"></i> (11) 99905-3605</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Brasil, Paraná, Curitiba </li>
-                    </ul>
-                </div>
-            </div>
 
     <script src="script.js"></script>
 </body>
