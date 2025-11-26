@@ -310,7 +310,6 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: var(--spacing-lg);
-    padding: var(--spacing-md) 0;
 }
 
 .production-card {
